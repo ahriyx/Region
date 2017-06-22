@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="pcd">
+    <!-- 1 select标签必须有一个 id 属性 -->
+    <!-- 2 data-id 设置默认选中的省市区值 -->
+    <select id="p" data-id="310000">
+      <option>-- 请选择 --</option>
+    </select>
+    <select id="c" data-id="310100">
+      <option>-- 请选择 --</option>
+    </select>
+    <select id="d" data-id="310115">
+      <option>-- 请选择 --</option>
+    </select>
+  </div>
+
+  <script src="../jquery.js"></script>
+  <script src="./jquery.region.js"></script>
+  <script>
+    $('#pcd').region({
+      url: './region.json'
+    });
+  </script>
+</body>
+
+</html>
